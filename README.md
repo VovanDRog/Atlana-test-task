@@ -1,3 +1,9 @@
+This is a test task for Atlana company
+
+Used technologies: React, Redux, Typescript, Axios
+
+Demo: https://vovandrog.github.io/Atlana-test-task/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
