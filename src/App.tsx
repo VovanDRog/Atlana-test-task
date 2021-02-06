@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useSelector } from "react-redux";
+import UserPage from "./components/UserPage";
+import UsersPage from "./components/UsersPage";
+import { RootState } from "./store";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const user = useSelector((state: RootState) => state.user);
+
+  // I did not want to use a reaction router or analogues
+  // so if user selected => I render another page
+  const renderPage = () =>
+    user.selectedName ? <UserPage /> : <UsersPage />;
+
+  return <div className="App">{renderPage()}</div>;
 }
 
 export default App;
