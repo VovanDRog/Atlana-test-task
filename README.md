@@ -1,4 +1,4 @@
-This is a test task for Atlana company
+##This is a test task for Atlana company
 
 Used technologies: React, Redux, Typescript, Axios
 
