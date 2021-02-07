@@ -2,7 +2,7 @@
 
 Used technologies: React, Redux, Typescript, Axios
 
-Before starting, set your token to the REACT_APP_GITHUB_TOKEN environment variable
+⚠⚠⚠Before starting, set your token to the REACT_APP_GITHUB_TOKEN environment variable⚠⚠⚠
 
 # Getting Started with Create React App
 
