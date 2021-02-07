@@ -1,5 +1,5 @@
 {
-	"homepage": "https://vovandrog.github.io/Atlana-test-task/",
+  "homepage": "https://vovandrog.github.io/Atlana-test-task/",
   "name": "atlana-test-task",
   "version": "0.1.0",
   "private": true,
@@ -12,6 +12,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "axios": "^0.21.1",
+    "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
@@ -28,7 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
