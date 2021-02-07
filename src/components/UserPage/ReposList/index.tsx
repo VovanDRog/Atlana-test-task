@@ -13,7 +13,7 @@ function ReposList(props: IRepos[]) {
     <div className="repos-wrapper">
       <input
         value={inputValue}
-        placeholder="Search for Users"
+        placeholder="Search for User`s Repositories"
         onChange={handleInputChange}
       />
 

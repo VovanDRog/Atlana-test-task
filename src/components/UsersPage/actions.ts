@@ -5,7 +5,7 @@ import { GET_USERS_LIST } from "../../store/actionTypes";
 export function searchUsersByName(name: string = "") {
   return async (dispatch: Dispatch<UsersAction>) => {
     // per_page => limit
-    const urs = `search/users?q=${name}&type=user&per_page=3`;
+    const urs = `search/users?q=${name}&type=user`;
     axios.get(urs).then(async (res) => {
       const {items} = res.data;
 
