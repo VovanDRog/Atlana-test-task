@@ -1,10 +1,10 @@
 import axios from "../../axiosConfig";
 import { Dispatch } from "redux";
-import { GET_USER, GET_USER_REPOS, SET_USER_LOADING } from "../../store/actionTypes";
+import { GET_USER, GET_USER_REPOS } from "../../store/actionTypes";
 
-export function getUsersByLogin(login: string = "") {
+export function getUsersByLogin(login = "") {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   return async (dispatch: Dispatch<UserAction>) => {
-    // dispatch({ type: SET_USER_LOADING, payload: true });
 
     const urs = `/users/${login}`;
 
@@ -15,7 +15,8 @@ export function getUsersByLogin(login: string = "") {
   };
 }
 
-export function getUserRepos(login: string = "") {
+export function getUserRepos(login = "") {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   return async (dispatch: Dispatch<UserAction>) => {
     const urs = `users/${login}/repos`;
     axios.get(urs).then((res) => {

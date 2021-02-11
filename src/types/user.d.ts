@@ -8,7 +8,9 @@ interface IUser {
   following: number;
   created_at: string;
   bio: string;
+
   // All other props
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   [x: string]: any;
 }
 
@@ -17,8 +19,10 @@ interface IRepos {
   name: string;
   html_url: string; // url to github project
   stargazers_count: number; // count of stars
-  forks_count: number; // count of forks
+  forks_count: number; // count of forks]
+
   // All other props
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   [x: string]: any;
 }
 

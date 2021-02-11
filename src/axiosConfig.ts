@@ -1,5 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const headers: any = {};
 const token = process.env.REACT_APP_GITHUB_TOKEN;
 if (token) {

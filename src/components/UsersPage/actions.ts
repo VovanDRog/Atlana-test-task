@@ -2,7 +2,7 @@ import axios from "../../axiosConfig";
 import { Dispatch } from "redux";
 import { GET_USERS_LIST } from "../../store/actionTypes";
 
-export function searchUsersByName(name: string = "") {
+export function searchUsersByName(name = "") {
   return async (dispatch: Dispatch<UsersAction>) => {
     // per_page => limit
     const urs = `search/users?q=${name}&type=user`;
@@ -21,7 +21,7 @@ export function searchUsersByName(name: string = "") {
   };
 }
 
-async function getCountOfRepos(userName: string = "") {
+async function getCountOfRepos(userName = "") {
   const urs = `users/${userName}`;
   return axios.get(urs).then((res) => {
     const { public_repos } = res.data;
