@@ -1,4 +1,5 @@
-import "./style.css";
+import "./style.scss";
+
 type Props = {
   loading: boolean;
   children: JSX.Element;

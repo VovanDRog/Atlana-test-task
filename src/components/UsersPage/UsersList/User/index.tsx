@@ -1,4 +1,4 @@
-import "./style.css";
+import "./style.scss";
 
 type Props = {
   user: IUser;
@@ -13,7 +13,7 @@ function User(props: Props) {
       className="card scale user-block pointer"
       onClick={() => onClick(user.login)}
     >
-      <img src={avatar_url} alt="user-avatar"/>
+      <img src={avatar_url} alt="user-avatar" />
 
       <span className="user-name">{login}</span>
       <span className="repo-count">Repo: {public_repos}</span>

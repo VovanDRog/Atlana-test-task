@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import "./style.css";
+import "./style.scss";
 
 type RenderValueType = {
   title: string;

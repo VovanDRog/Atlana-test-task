@@ -1,0 +1,16 @@
+.user-info {
+  display: flex;
+  align-items: center;
+
+  .user-avatar {
+    width: 40%;
+    height: auto;
+    max-height: 175px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  ul > li {
+    margin: 3px 0;
+  }
+}

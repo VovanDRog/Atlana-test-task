@@ -4,7 +4,7 @@ import Repo from "./Repo";
 function ReposList(props: IRepos[]) {
   const [inputValue, setInputValue] = useState<string>("");
   
-  function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleInputChange(e: React.ChangeEvent<HTMLInputElement>): void {
     const {target: {value}} = e;
     setInputValue(value);
   }

@@ -7,7 +7,7 @@ import ReposList from "./ReposList";
 import UserInfo from "./UserInfo";
 import * as actionTypes from "../../store/actionTypes";
 import Loader from "../Loader";
-import "./style.css";
+import "./style.scss";
 
 function UserPage() {
   const user = useSelector((state: RootState) => state.user);
@@ -25,7 +25,7 @@ function UserPage() {
     }
   }, [user.selectedName]);
 
-  function handleBackClick() {
+  function handleBackClick(): void {
     dispatch({ type: actionTypes.SELECT_USER_NAME, payload: undefined });
   }
 

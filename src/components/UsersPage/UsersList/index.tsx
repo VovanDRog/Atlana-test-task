@@ -2,7 +2,7 @@ import User from "./User";
 import { SELECT_USER_NAME } from "../../../store/actionTypes";
 import { Dispatch } from "redux";
 import { useDispatch } from "react-redux";
-import "./style.css";
+import "./style.scss";
 
 type Props = {
   list: IUser[],

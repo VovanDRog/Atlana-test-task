@@ -1,9 +1,9 @@
-import "./style.css";
+import "./style.scss";
 
 function Repo(props: IRepos) {
   const { name, html_url, stargazers_count, forks_count } = props;
 
-  function onClick() {
+  function onClick(): void {
     const win = window.open(html_url, "_blank");
     win?.focus();
   }
