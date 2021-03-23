@@ -1,18 +1,23 @@
-import { useSelector } from "react-redux";
-import UserPage from "./components/UserPage";
-import UsersPage from "./components/UsersPage";
-import { RootState } from "./store";
+import UserPage from "./pages/UserPage";
+import UsersPage from "./pages/UsersPage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.scss";
 
-function App() {
-  const user = useSelector((state: RootState) => state.user);
-
-  // I did not want to use a reaction router or analogues
-  // so if user selected => I render another page
-  const renderPage = () =>
-    user.selectedName ? <UserPage /> : <UsersPage />;
-
-  return <div className="App">{renderPage()}</div>;
+function App(): JSX.Element {
+  return (
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/:id">
+            <UserPage />
+          </Route>
+          <Route exact path="/">
+            <UsersPage />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
