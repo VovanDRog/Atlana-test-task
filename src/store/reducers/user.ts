@@ -1,4 +1,4 @@
-import * as actionTypes from "../actionTypes";
+import * as actionTypes from "../actionTypes/user";
 
 const initialState: UserState = {
   selectedName: "",
@@ -10,16 +10,8 @@ const initialState: UserState = {
   reposLoading: true,
 };
 
-const userReducer = (state: UserState = initialState, action: UserAction) => {
+function userReducer(state: UserState = initialState, action: UserAction) {
   switch (action.type) {
-    case actionTypes.SELECT_USER_NAME:
-      return {
-        ...state,
-        selectedName: action.payload,
-        userLoading: true,
-        reposLoading: true,
-      };
-
     case actionTypes.GET_USER:
       return { ...state, item: action.payload, userLoading: false };
     case actionTypes.SET_USER_LOADING:
@@ -33,6 +25,6 @@ const userReducer = (state: UserState = initialState, action: UserAction) => {
     default:
       return state;
   }
-};
+}
 
 export default userReducer;
