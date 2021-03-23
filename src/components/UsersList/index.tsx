@@ -1,18 +1,16 @@
 import User from "./User";
-import { SELECT_USER_NAME } from "../../../store/actionTypes";
-import { Dispatch } from "redux";
-import { useDispatch } from "react-redux";
+import { useHistory } from "react-router";
 import "./style.scss";
 
 type Props = {
   list: IUser[],
 };
 
-function UsersList({list}: Props) {
-  const dispatch: Dispatch<SelectUserNameAction> = useDispatch();
+function UsersList({list}: Props): JSX.Element {
+  const history = useHistory();
 
   function handleUserClick(login: string){
-    dispatch({type: SELECT_USER_NAME, payload: login })
+    history.push(`/${login}`)
   }
 
   return (

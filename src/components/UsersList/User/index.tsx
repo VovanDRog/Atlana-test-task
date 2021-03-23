@@ -2,12 +2,13 @@ import "./style.scss";
 
 type Props = {
   user: IUser;
-  onClick: Function;
+  onClick: (v: string) => void;
 };
 
-function User(props: Props) {
+function User(props: Props): JSX.Element {
   const { user, onClick } = props;
   const { login, avatar_url, public_repos } = user;
+
   return (
     <div
       className="card scale user-block pointer"

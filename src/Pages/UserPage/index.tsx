@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Dispatch } from "redux";
 import { RootState } from "../../store";
 import { getUserRepos, getUsersByLogin } from "../../actions/user";
-import * as actionTypes from "../../store/actionTypes";
+import * as actionTypes from "../../store/actionTypes/user";
 import Loader from "../../components/Loader";
 import UserInfo from "../../components/UserInfo";
 import ReposList from "../../components/ReposList";

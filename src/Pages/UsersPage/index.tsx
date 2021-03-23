@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Dispatch } from "redux";
-import * as actionTypes from "../../store/actionTypes";
+import * as actionTypes from "../../store/actionTypes/users";
 import { searchUsersByName } from "../../actions/users";
 import { RootState } from "../../store";
 import UsersList from "../../components/UsersList";

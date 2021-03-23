@@ -1,4 +1,4 @@
-import * as actionTypes from "../actionTypes";
+import * as actionTypes from "../actionTypes/users";
 
 const initialState: UsersState = {
   list: [],
@@ -6,18 +6,18 @@ const initialState: UsersState = {
   loading: false,
 };
 
-const usersReducer = (
+function usersReducer(
   state: UsersState = initialState,
   action: UsersAction | ChangeInputAction
-) => {
+) {
   switch (action.type) {
     case actionTypes.GET_USERS_LIST:
-      return {...state, list: action.payload, loading: false};
+      return { ...state, list: action.payload, loading: false };
     case actionTypes.CHANGE_SEARCH_INPUT_VALUE:
-        return { ...state, searchInputValue: action.payload };
+      return { ...state, searchInputValue: action.payload };
     default:
       return state;
   }
-};
+}
 
 export default usersReducer;

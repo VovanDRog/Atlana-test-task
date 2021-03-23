@@ -1,6 +1,6 @@
 import axios from "../axiosConfig";
 import { Dispatch } from "redux";
-import { GET_USERS_LIST } from "../store/actionTypes";
+import { GET_USERS_LIST } from "../store/actionTypes/users";
 
 export function searchUsersByName(name = "") {
   return async (dispatch: Dispatch<UsersAction>) => {

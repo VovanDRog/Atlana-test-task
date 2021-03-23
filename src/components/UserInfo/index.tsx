@@ -4,10 +4,10 @@ import "./style.scss";
 type RenderValueType = {
   title: string;
   value: string;
-  render?: Function;
+  render?: (v: any) => any;
 };
 
-function UserInfo(props: IUser) {
+function UserInfo(props: IUser): JSX.Element {
   const { avatar_url, bio } = props;
 
   const renderValue = ({ title, value, render }: RenderValueType) => (
@@ -23,10 +23,10 @@ function UserInfo(props: IUser) {
   );
 
   const renderDate = (value: string) => {
-    let today = new Date(value);
+    const today = new Date(value);
     let dd: string = today.getDate().toString();
     let mm: string = (today.getMonth() + 1).toString();
-    let yyyy = today.getFullYear();
+    const yyyy = today.getFullYear();
     if (parseInt(dd) < 10) {
       dd = "0" + dd;
     }

@@ -1,6 +1,6 @@
 import axios from "../axiosConfig";
 import { Dispatch } from "redux";
-import { GET_USER, GET_USER_REPOS } from "../store/actionTypes";
+import { GET_USER, GET_USER_REPOS } from "../store/actionTypes/user";
 
 export function getUsersByLogin(login = "") {
   return async (dispatch: Dispatch<UserAction>) => {
