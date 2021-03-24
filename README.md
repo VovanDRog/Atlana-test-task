@@ -1,4 +1,4 @@
-# This is a test task for Atlana company
+# GitHub Users Searcher
 
 Used technologies: React, Redux, Typescript, Axios
 
