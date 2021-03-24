@@ -5,7 +5,7 @@ type Props = {
   children: JSX.Element;
 };
 
-function Loader({ loading, children }: Props) {
+function Loader({ loading, children }: Props): JSX.Element {
   if (loading) {
     return (
       <div className="lds-ring">

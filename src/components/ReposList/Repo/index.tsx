@@ -1,6 +1,6 @@
 import "./style.scss";
 
-function Repo(props: IRepos) {
+function Repo(props: IRepos): JSX.Element {
   const { name, html_url, stargazers_count, forks_count } = props;
 
   function onClick(): void {

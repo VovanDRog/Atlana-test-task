@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Repo from "./Repo";
 
-function ReposList(props: IRepos[]) {
+function ReposList(props: IRepos[]): JSX.Element {
   const [inputValue, setInputValue] = useState<string>("");
   
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>): void {

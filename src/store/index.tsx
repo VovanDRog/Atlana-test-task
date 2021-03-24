@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, combineReducers } from "redux";
+import { createStore, applyMiddleware, combineReducers, Middleware } from "redux";
 import thunkMiddleware from "redux-thunk";
 import userReducer from "./reducers/user";
 import usersReducer from "./reducers/users";
@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
   users: usersReducer,
 });
 
-const bindMiddleware = (middleware: Array<any>) => {
+const bindMiddleware = (middleware: Array<Middleware>) => {
   // don't show the store in production
   if (process.env.NODE_ENV !== "production") {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
