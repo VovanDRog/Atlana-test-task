@@ -1,6 +1,5 @@
 {
-  "homepage": "https://vovandrog.github.io/Atlana-test-task/",
-  "name": "atlana-test-task",
+  "name": "github_searcher",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -37,7 +36,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint src/**/*.ts[x]"
   },
   "eslintConfig": {
     "extends": [
